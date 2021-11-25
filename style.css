@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --primary: #751386;
+    --community: rgba(117, 19, 134, 0.5);
+    --font: "Poppins", sans-serif;
+    --fanbase-bg: #E5E5E526;
+    --main-bg: white;
+    --community-bg: #7011810F;
+    --text: black;
+    --white: white;
+    --light-text: #565656;
+}
+
+/* css resets */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    position: relative;
+}
+
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--light-text);
+}
+
+
+/* some utilty classes */
+
+.w-400 {
+    font-weight: 400;
+}
+
+.w-500 {
+    font-weight: 500;
+}
+
+.w-600 {
+    font-weight: 600;
+}
+
+.btn-primary {
+    color: var(--white);
+    background: var(--primary);
+}
+
+.btn-start {
+    background: var(--white);
+    color: var(--primary);
+}
+
+button {
+    padding: 10px 50px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* styling */
+
+/* nav-styling */
+
+nav {
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+}
+
+.links,
+.write-login {
+    /* display: none; */
+    /* margin-left: auto; */
+    display: flex;
+}
+
+.links {
+    margin-left: 50px;
+}
+
+.links li,
+.write-login li {
+    margin-left: 20px;
+}
+
+.write-login {
+    margin-left: auto;
+}
+
+.hamburger {
+    margin-left: auto;
+    display: none;
+}
+
+.overlay {
+    display: none;
+}
+
+.line {
+    width: 30px;
+    height: 5px;
+    background: var(--light-text);
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
+
+    .links,
+    .write-login {
+        display: none;
+    }
+
+    nav {
+        padding: 10px 20px;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* overlay styling for mobile design */
+    .overlay.show {
+        display: block;
+        position: absolute;
+        padding: 20px;
+        background: gray;
+        width: 90%;
+        left: 5%;
+        top: 120px;
+        text-align: center;
+        border-radius: 20px;
+    }
+
+    .over li,
+    .lay li {
+        margin-bottom: 10px;
+    }
+
+    .lay {
+        margin-top: 30px;
+    }
+}
+
+
+
+/* section styling */
+
+
+/* fisrt section  and second section*/
+.hood,
+.build {
+    margin-top: 50px;
+    /* padding-right: 150px;
+    padding-left: 250px; */
+    padding-inline: 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+
+
+.build {
+    position: relative;
+    background: var(--fanbase-bg);
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+.fea {
+    position: absolute;
+    width: 120px;
+}
+
+.storytelling h2,
+.monetize h2 {
+    font-size: 3rem;
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+.storytelling p,
+.monetize p {
+    color: var(--light-text);
+    margin-bottom: 10px;
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .hood,
+    .build {
+        padding-inline: 150px;
+    }
+}
+
+
+@media screen and (max-width: 950px) {
+
+    .hood,
+    .build {
+        padding-inline: 60px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .hood,
+    .build {
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .build{
+        padding-bottom: 50px;
+    }
+
+    .storytelling,
+    .monetize {
+        text-align: center;
+        padding-inline: 40px;
+    }
+
+    .hood-img,
+    .build-img {
+        margin-top: 20px;
+    }
+
+    .hood-img img,
+    .build-img img {
+        width: 100%;
+    }
+
+    .fea {
+        left: 0;
+    }
+}  
+
+
+/* third section */
+
+.community{
+    color: var(--white);
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-position: center;
+    background:
+        linear-gradient(rgba(118, 19, 135, 0.5),rgba(118, 19, 135, 0.5)),
+        url("./img/support.png");
+}
+
+
+.community h2{
+    font-size: 3rem;
+    width: 35%;
+}
+.community p{
+    width: 40%;
+    margin-top: 20px;
+    line-height: 40px;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 850px) {
+    .community h2{
+        width: 60%;
+    }
+    .community p{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .community h2, .community p{
+        width: 100%;
+    }
+}
