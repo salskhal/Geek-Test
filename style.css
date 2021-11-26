@@ -2,11 +2,11 @@
 
 :root {
     --primary: #751386;
-    --community: rgba(117, 19, 134, 0.5);
+    --support: rgba(117, 19, 134, 0.5);
     --font: "Poppins", sans-serif;
     --fanbase-bg: #E5E5E526;
     --main-bg: white;
-    --community-bg: #7011810F;
+    --support-bg: #7011810F;
     --text: black;
     --white: white;
     --light-text: #565656;
@@ -103,22 +103,78 @@ nav {
     margin-left: auto;
 }
 
-.hamburger {
-    margin-left: auto;
-    display: none;
-}
+
 
 .overlay {
     display: none;
 }
 
-.line {
+.hamburger {
+    margin-left: auto;
+    display: none;
+    width: 50px;
+    position: relative;
+    height: 45px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.hamburger span{
+    display: block;
+  position: absolute;
+  height: 7px;
+  width: 100%;
+  background: var(--light-text);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0px;
+  }
+  
+.hamburger span:nth-child(2) {
+    top: 18px;
+  }
+  
+.hamburger span:nth-child(3) {
+    top: 36px;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    top: 18px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+  }
+  
+  .hamburger.open span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+  
+  
+
+/* .line {
     width: 30px;
     height: 5px;
     background: var(--light-text);
     margin-bottom: 5px;
     border-radius: 10px;
-}
+} */
 
 @media screen and (max-width: 800px) {
 
@@ -146,7 +202,7 @@ nav {
         left: 5%;
         top: 120px;
         text-align: center;
-        border-radius: 20px;light
+        border-radius: 20px;
     }
 
     .over li,
@@ -209,6 +265,11 @@ nav {
     margin-bottom: 10px;
 }
 
+.hood-img img,
+.build-img img {
+    width: 100%;
+}
+
 
 @media screen and (max-width: 1000px) {
 
@@ -255,10 +316,7 @@ nav {
 
     }
 
-    .hood-img img,
-    .build-img img {
-        width: 100%;
-    }
+   
 
     .fea {
         left: 0;
@@ -268,7 +326,7 @@ nav {
 
 /* third section */
 
-.community{
+.support{
     color: var(--white);
     width: 100%;
     height: 600px;
@@ -284,11 +342,11 @@ nav {
 }
 
 
-.community h2{
+.support h2{
     font-size: 3rem;
     width: 35%;
 }
-.community p{
+.support p{
     width: 40%;
     margin-top: 20px;
     line-height: 40px;
@@ -296,16 +354,56 @@ nav {
 }
 
 @media screen and (max-width: 850px) {
-    .community h2{
+    
+    .support h2{
         width: 60%;
     }
-    .community p{
+    .support p{
         width: 60%;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .community h2, .community p{
+    .support{
+        padding-inline: 20px;
+    }
+    .support h2, .support p{
         width: 100%;
     }
 }
+
+
+
+/* fourth section and fifth section */
+.fiction, .community{
+    padding-inline: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    /* gap: 20px; */
+}
+
+.fiction-img img, .community-img img{
+    width: 100%;
+}
+
+.community{
+    background: var(--support-bg);
+}
+
+
+.fiction h3, .community h3{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.fiction p, .community p{
+    color: var(--light-text);
+    margin-bottom: 30px;
+}
+
+/* @media screen and (max-width: ){
+    
+} */
