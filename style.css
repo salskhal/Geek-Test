@@ -407,3 +407,48 @@ nav {
 /* @media screen and (max-width: ){
     
 } */
+
+@media screen and (max-width: 1000px) {
+
+    .fiction, .community{
+        padding-inline: 150px;
+
+    }
+}
+
+
+@media screen and (max-width: 950px) {
+
+    .fiction, .community {
+        padding-inline: 60px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .fiction, .community {
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    .community{
+        padding-bottom: 50px;
+    }
+
+    .explore,
+    .join {
+        text-align: center;
+        padding-inline: 40px;
+    }
+
+    .fiction-img,
+    .community-img {
+        margin-top: 50px;
+        padding-inline: 30px;
+
+    }
+}  
